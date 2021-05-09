@@ -20,6 +20,7 @@ startButton.addEventListener("click", ({target}) => {
     clearTimer();
     if(pauseButton.textContent.toLocaleLowerCase() === "pause"){
       console.log("button = pause");
+      console.log("Remove timer id: ", timerID);
       clearInterval(timerID);
     }
   }
@@ -67,4 +68,5 @@ const getCorrectNumber = (number) => number < 10 ? "0" + number : number;
 function clearTimer(){
   currentMS = 0;
   setTime(0);
+  pauseButton.textContent = "pause";
 }
