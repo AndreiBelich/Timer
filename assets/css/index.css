@@ -1,3 +1,56 @@
 *{
   box-sizing: border-box;
 }
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hidden{
+  display: none;
+}
+
+.root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.timer-wrapper{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid brown;
+  padding: 35px;
+  min-width: 300px;
+}
+
+.timer-title{
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.timer-data{
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.buttons-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.control-button{
+  border: 1px solid transparent;
+  padding: 5px 15px;
+  background-color: rgb(204, 40, 40);
+  min-width: 100px;
+  text-transform: uppercase;
+  color: #292727;
+}
+
+.run-state{
+  justify-content: space-between;
+}
