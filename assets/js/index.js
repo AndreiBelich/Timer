@@ -12,14 +12,14 @@ startButton.addEventListener("click", ({target}) => {
       target.textContent = "stop";
       buttonsWrapper.classList.add("run-state");
       pauseButton.classList.remove("hidden");
-      //timer.start(61150000);   //можно использовать для теста
       timer.start();
       break;
     case "stop":
       target.textContent = "start";
       buttonsWrapper.classList.remove("run-state");
       pauseButton.classList.add("hidden");
-      clear();
+      timer.reset();
+      pauseButton.textContent = "pause";
       break;
   }
 });
@@ -36,8 +36,3 @@ pauseButton.addEventListener("click", ({target}) => {
       break;
   }
 });
-
-function clear(){
-  timer.reset();
-  pauseButton.textContent = "pause";
-}
